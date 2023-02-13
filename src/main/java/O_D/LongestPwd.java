@@ -1,27 +1,38 @@
 package O_D;
-import java.util.Scanner;
-import java.util.*;
 
 /**
- *在一行中输入一个字符串数组，如果其中一个字符串的所有以索引0开头的子串在数组中都有，那么这个字符串就是潜在密码，在所有潜在密码中最长的是真正的密码，如果有多个长度相同的真正的密码，那么取字典序最大的为唯一的真正的密码，求唯一的真正的密码。
+ * 给定两个数组a，b，若a[i] == b[j] 则称 [i, j] 为一个二元组，求在给定的两个数组中，二元组的个数。
+ *
+ * 输入描述：
+ * 第一行输入 m
+ * 第二行输入m个数，表示第一个数组
+ *
+ * 第三行输入 n
+ * 第四行输入n个数，表示第二个数组
+ *
+ * 输出描述：
+ *
+ * 二元组个数。
  *
  * 示例1：
  *
- * 输入： h he hel hell hello o ok n ni nin ninj ninja
- *
- * 输出： ninja
- *
- * 说明： 按要求，hello、ok、ninja都是潜在密码。检查长度，hello、ninja是真正的密码。检查字典序，ninja是唯一真正密码。
- *
- * 示例2：
- *
  * 输入：
- * a b c d f
+ *
+ * 4
+ *
+ * 1 2 3 4
+ *
+ * 1
+ *
+ * 1
  *
  * 输出：
- * f
+ *
+ * 1
  */
-public class RealPass {
+import java.util.Scanner;
+import java.util.*;
+public class LongestPwd {
     static class Main {
         public static int min_times;
         public static void main(String[] args) {

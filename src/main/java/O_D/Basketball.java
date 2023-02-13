@@ -1,34 +1,34 @@
 package O_D;
-import java.util.Scanner;
-import java.util.*;
 
 /**
- * 平分数组
- * 给定一个数组nums，可以将元素分为若干个组，使得每组和相等，求出满足条件的所有分组中，最大的平分组个数。
+ * 星际篮球
+ * 输入描述
  *
- * 输入描述：
- * 第一行输入 m
- * 接着输入m个数，表示此数组
- * 数据范围:1<=M<=50, 1<=nums[i]<=50
+ * 输入第一行为一个数字 t ，表示为有得分的分钟数 1 ≤ t ≤ 50
+ * 第二行为 t 个数字，代表每一分钟的得分 p， 1 ≤ p ≤ 50
  *
- * 输出描述：
+ * 输出描述
  *
- * 最大的平分组数个数。
+ * 输出有得分的队员都是MVP时，最少得MVP得分。
  *
  * 示例1：
  *
  * 输入：
  *
- * 7
- * 4 3 2 3 5 2 1
+ * 9
+ * 5 2 1 5 2 1 5 2 1
  *
  * 输出：
  *
- * 4
+ * 6
+ * 说明：
+ *
+ * 4人MVP，每个人都是6分。
  */
-public class BisectorArray {
 
-
+import java.util.Scanner;
+import java.util.*;
+public class Basketball {
     static class Main {
         public static void main(String[] args) {
             // 处理输入
@@ -50,7 +50,7 @@ public class BisectorArray {
             for (int i=count;i>0;i--) {
                 //从最大的可能行开始，满足条件即为为最小的情况
                 if (canPartitionKSubsets(nums, i, sum)) {
-                    System.out.println(i);
+                    System.out.println(sum / i);
                     break;
                 }
             }
